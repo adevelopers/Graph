@@ -27,7 +27,6 @@ class GameScene: SKScene {
         addChild(SceneModel.createDefaultAtom())
     }
     
-    
     func addFormulaLabel() {
         let formulaLabel = SKLabelNode(text: sceneModel.clearedFormula)
         formulaLabel.color = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -80,6 +79,25 @@ extension SKLabelNode {
     
     func movingUp(_ value: CGFloat ) {
         self.position.y += value
+    }
+    
+}
+
+extension AtomNode {
+    func movingUp(_ value: CGFloat ) {
+        self.position.y += value
+    }
+    
+    func movingDown(_ value: CGFloat ) {
+        self.position.y -= value
+    }
+    
+    func movingLeft(_ value: CGFloat ) {
+        self.position.x -= value
+    }
+    
+    func movingRight(_ value: CGFloat ) {
+        self.position.x += value
     }
     
 }
