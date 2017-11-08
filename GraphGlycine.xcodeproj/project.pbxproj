@@ -14,6 +14,8 @@
 		7159700D1FB31D66002EE78C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7159700C1FB31D66002EE78C /* ViewController.swift */; };
 		7159700F1FB31D71002EE78C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7159700E1FB31D71002EE78C /* GameScene.sks */; };
 		715970121FB31E9D002EE78C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715970101FB31E9D002EE78C /* Main.storyboard */; };
+		715970141FB3206A002EE78C /* Atom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715970131FB3206A002EE78C /* Atom.swift */; };
+		715970181FB321E0002EE78C /* AtomNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715970171FB321E0002EE78C /* AtomNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		7159700C1FB31D66002EE78C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7159700E1FB31D71002EE78C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		715970111FB31E9D002EE78C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		715970131FB3206A002EE78C /* Atom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atom.swift; sourceTree = "<group>"; };
+		715970171FB321E0002EE78C /* AtomNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomNode.swift; path = Nodes/AtomNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 		711EF7A91FB31C1B004AC13F /* GraphGlycine */ = {
 			isa = PBXGroup;
 			children = (
+				715970161FB3216C002EE78C /* Nodes */,
+				715970151FB32072002EE78C /* Core */,
 				715970081FB31D44002EE78C /* AppDelegate.swift */,
 				7159700A1FB31D5E002EE78C /* GameScene.swift */,
 				7159700C1FB31D66002EE78C /* ViewController.swift */,
@@ -66,6 +72,22 @@
 				715970101FB31E9D002EE78C /* Main.storyboard */,
 			);
 			path = GraphGlycine;
+			sourceTree = "<group>";
+		};
+		715970151FB32072002EE78C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				715970131FB3206A002EE78C /* Atom.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		715970161FB3216C002EE78C /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				715970171FB321E0002EE78C /* AtomNode.swift */,
+			);
+			name = Nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +167,9 @@
 			files = (
 				7159700D1FB31D66002EE78C /* ViewController.swift in Sources */,
 				7159700B1FB31D5E002EE78C /* GameScene.swift in Sources */,
+				715970141FB3206A002EE78C /* Atom.swift in Sources */,
 				715970091FB31D44002EE78C /* AppDelegate.swift in Sources */,
+				715970181FB321E0002EE78C /* AtomNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

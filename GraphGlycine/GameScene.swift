@@ -13,6 +13,10 @@ class SceneModel {
     var smilesFormula: String = "C(C(=O)O)N"
     var clearedFormula: String = "CCOON"
     
+    class func createDefaultAtom() -> AtomNode {
+     
+        return AtomNode(atom: Atom("C", 4))
+    }
 }
 
 class GameScene: SKScene {
@@ -22,14 +26,24 @@ class GameScene: SKScene {
     var sceneModel = SceneModel()
     
     override func didMove(to view: SKView) {
-     
+        addFormulaLabel()
+        addDefaultAtom()
+    }
+    
+    
+    func addDefaultAtom() {
+        addChild(SceneModel.createDefaultAtom())
+    }
+    
+    
+    func addFormulaLabel() {
         let formulaLabel = SKLabelNode(text: sceneModel.clearedFormula)
         formulaLabel.color = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         formulaLabel.fontName = "Arial"
         formulaLabel.fontSize = 30
+        formulaLabel.movingUp(150)
         
         addChild(formulaLabel)
-        
     }
     
     
@@ -65,4 +79,15 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
     
     }
+}
+
+
+
+
+extension SKLabelNode {
+    
+    func movingUp(_ value: CGFloat ) {
+        self.position.y += value
+    }
+    
 }
