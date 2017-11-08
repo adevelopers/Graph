@@ -9,15 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class SceneModel {
-    var smilesFormula: String = "C(C(=O)O)N"
-    var clearedFormula: String = "CCOON"
-    
-    class func createDefaultAtom() -> AtomNode {
-     
-        return AtomNode(atom: Atom("C", 4))
-    }
-}
+
 
 class GameScene: SKScene {
     
