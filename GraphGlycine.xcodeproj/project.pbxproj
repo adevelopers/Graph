@@ -17,6 +17,7 @@
 		715970141FB3206A002EE78C /* Atom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715970131FB3206A002EE78C /* Atom.swift */; };
 		715970181FB321E0002EE78C /* AtomNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715970171FB321E0002EE78C /* AtomNode.swift */; };
 		7159701A1FB326ED002EE78C /* Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715970191FB326ED002EE78C /* Bond.swift */; };
+		7159701C1FB3288C002EE78C /* BondNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7159701B1FB3288C002EE78C /* BondNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		715970131FB3206A002EE78C /* Atom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atom.swift; sourceTree = "<group>"; };
 		715970171FB321E0002EE78C /* AtomNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomNode.swift; path = Nodes/AtomNode.swift; sourceTree = "<group>"; };
 		715970191FB326ED002EE78C /* Bond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bond.swift; sourceTree = "<group>"; };
+		7159701B1FB3288C002EE78C /* BondNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BondNode.swift; path = Nodes/BondNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				715970171FB321E0002EE78C /* AtomNode.swift */,
+				7159701B1FB3288C002EE78C /* BondNode.swift */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7159700D1FB31D66002EE78C /* ViewController.swift in Sources */,
+				7159701C1FB3288C002EE78C /* BondNode.swift in Sources */,
 				7159700B1FB31D5E002EE78C /* GameScene.swift in Sources */,
 				7159701A1FB326ED002EE78C /* Bond.swift in Sources */,
 				715970141FB3206A002EE78C /* Atom.swift in Sources */,
