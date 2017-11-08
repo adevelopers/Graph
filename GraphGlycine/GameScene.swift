@@ -9,15 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class SceneModel {
-    var smilesFormula: String = "C(C(=O)O)N"
-    var clearedFormula: String = "CCOON"
-    
-    class func createDefaultAtom() -> AtomNode {
-     
-        return AtomNode(atom: Atom("C", 4))
-    }
-}
+
 
 class GameScene: SKScene {
     
@@ -27,14 +19,31 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         addFormulaLabel()
-        addDefaultAtom()
+        addDefaultMolecule()
     }
     
+    func addDefaultMolecule() {
+    
+        let C1 = SceneModel.createDefaultAtom()
+        let C2 = SceneModel.createDefaultAtom()
+        let bondNode = BondNode(C1, C2)
+        C1.movingLeft(100)
+        C2.movingRight(100)
+        
+        addChild(bondNode)
+        addChild(C1)
+        addChild(C2)
+        
+        
+        bondNode.updateBond()
+        
+        
+        
+    }
     
     func addDefaultAtom() {
         addChild(SceneModel.createDefaultAtom())
     }
-    
     
     func addFormulaLabel() {
         let formulaLabel = SKLabelNode(text: sceneModel.clearedFormula)
@@ -88,6 +97,25 @@ extension SKLabelNode {
     
     func movingUp(_ value: CGFloat ) {
         self.position.y += value
+    }
+    
+}
+
+extension AtomNode {
+    func movingUp(_ value: CGFloat ) {
+        self.position.y += value
+    }
+    
+    func movingDown(_ value: CGFloat ) {
+        self.position.y -= value
+    }
+    
+    func movingLeft(_ value: CGFloat ) {
+        self.position.x -= value
+    }
+    
+    func movingRight(_ value: CGFloat ) {
+        self.position.x += value
     }
     
 }
